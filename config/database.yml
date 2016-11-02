@@ -13,20 +13,21 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password:
   socket: /tmp/mysql.sock
+  username: root
+  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
+  host: db
 
 development:
   <<: *default
-  database: signup2_development
+  database: scalene_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: signup2_test
+  database: scalene_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +50,4 @@ test:
 #
 production:
   <<: *default
-  database: signup2_production
-  username: signup2
-  password: <%= ENV['SIGNUP2_DATABASE_PASSWORD'] %>
+  database: scalene_production
