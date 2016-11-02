@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Sign up - New</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!--5grid--><script src="../javascripts/viewport.js"></script><!--[if lt IE 9]>
+<script src="../javascripts/ie.js"></script><![endif]-->
+  <!--5grid--><script src="../javascripts/viewport.js"></script><!--[if lt IE 9]>
+<script src="../javascripts/ie.js"></script><![endif]-->
+  <link rel="stylesheet" href="../stylesheets/responsive.css" /><!--/5grid-->
+  <link rel="stylesheet" href="../stylesheets/style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<div id="header-wrapper">
+  <header id="header" class="5grid">
+    <div class="12u-first">
+
+      <!-- Logo -->
+      <h1>
+        <a href="<%=root_url%>">
+          <img src="../images/ScaleneLogo.png" width="250" height="110" alt=""/>
+        </a>
+      </h1>
+    </div>
+  </header>
+  <div id="banner">
+    <div class="5grid 5grid-alt">
+    <%=yield%>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright -->
+<div id="copyright">
+  (c) 2015 Scalene.com Website. All rights reserved HPE.
+  <br> By clicking SUBMIT you accept Scalene's Terms of Entry
+</div>
+</body>
+</html>
