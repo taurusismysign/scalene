@@ -10,13 +10,14 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
-  pool: 5
-  socket: /tmp/mysql.sock
   username: root
-  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   host: db
+  min_messages: warning
+  pool: 2
+  timeout: 5000
 
 development:
   <<: *default
